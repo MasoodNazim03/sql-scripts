@@ -30,8 +30,8 @@ LEFT JOIN
 	ON d.AssessmentPersonId = b.AssessmentPersonId
 
 WHERE
-	-- d.TuqReference = 2004678
-	d.TuqReference = 9999001 -- Melanie Grunau
-	-- AND c.Number = 7061
+	d.TuqReference IN (8002120, 8002121, 8002122)
+	AND c.Number >= 7000
+	AND c.Number <= 8000
 
 ORDER BY c.Number
