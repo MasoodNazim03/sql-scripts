@@ -64,3 +64,22 @@
         WHEN 5 THEN 'Resumed (Pause oder Prüfung beendet)'
         ELSE 'Unknown'
     END AS ActionCodeName,
+
+-- Mündliche Paare
+    CASE op.OralPairStatus
+        WHEN 1 THEN 'Initial status when created'
+        WHEN 2 THEN 'In Preparation'
+        WHEN 3 THEN 'In Progress'
+        WHEN 4 THEN 'Paused'
+        WHEN 5 THEN 'Completed'
+        ELSE 'Unknown'
+    END AS OPS_Description,
+
+-- Prüfungsformat Status - Darf die Prüfung eingesetzt werden oder nicht?
+    CASE ed.ExaminationDefinitionStatus
+        WHEN 1 THEN 'Nicht Aktive - In Bearbeitung'
+        WHEN 2 THEN 'Nicht Aktive - Wartet auf Genehmigung'
+        WHEN 3 THEN 'Aktive - darf in Prod eingesetzt werden'
+        WHEN 4 THEN 'Nicht Aktiv - inactive'
+        ELSE 'Unknown'
+    END AS 'Prüfungsformat Status'

@@ -3,7 +3,7 @@ DECLARE @ExaminationNumber NVARCHAR(50) = '9209915';
 DECLARE @ParticipantNumbers NVARCHAR(MAX) = 'D358667,D358669';
 
 UPDATE egt
-SET egt.ActionTimestamp = DATEADD(MINUTE, 5, egt.ActionTimestamp) -- 3 Minuten geben - um zeit abzuziehen einfach ein minus vor den minuten reinschreiben
+SET egt.ActionTimestamp = DATEADD(MINUTE, 5, egt.ActionTimestamp) -- 5 Minuten mehr geben - um zeit abzuziehen einfach ein minus vor den minuten reinschreiben
 -- SET egt.ActionTimestamp =  DATEADD(MINUTE, 50, DATEADD(HOUR, 8, CAST(CAST(egt.ActionTimestamp AS DATE) AS DATETIME))) -- Feste Uhrzeit 8:50 Uhr reinschreiben
 
 FROM

@@ -11,7 +11,7 @@
     END AS 'Prüfungsteilnehmer Status',
 **/
 
-DECLARE @ExaminationNumber NVARCHAR(50) = '9208086';
+DECLARE @ExaminationNumber NVARCHAR(50) = '9020608';
 --DECLARE @ParticipantNumbers NVARCHAR(MAX) = 'D339434';
 
 UPDATE egp
@@ -37,5 +37,5 @@ INNER JOIN
 
 WHERE
 	e.ExaminationNumber = @ExaminationNumber
-	AND p.ParticipantNumber IN (SELECT value FROM STRING_SPLIT(@ParticipantNumbers, ','))
+	-- AND p.ParticipantNumber IN (SELECT value FROM STRING_SPLIT(@ParticipantNumbers, ','))
 	AND ep.ExaminationPartType = 1 -- Für Mündliche Prüfungsteil

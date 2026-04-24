@@ -1,5 +1,5 @@
 -- Mündliche Prüfungsteil Status ändern
-DECLARE @ExaminationNumber NVARCHAR(50) = '9208086';
+DECLARE @ExaminationNumber NVARCHAR(50) = '9020796';
 
 /**
     CASE ep.ExaminationPartStatus
